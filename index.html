@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>30-Minute Countdown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    
+  <div class="timer-container">
+  
+    <!-- <h1>Stellar Space Quiz <br> Written Round Timer</h1> -->
+    <div class="title-wrapper">
+        <img src="stellar_space_quiz_logo.png" alt="logo" class="logo">
+        
+            <div class="aurora">
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+              </div>
+           <h1 class="title">Stellar Space Quiz <br> Written Round Timer </h1>
+       
+    <div class="circle-container">
+      <svg class="progress-ring" width="200" height="200">
+        <circle class="progress-ring-bg" cx="100" cy="100" r="90" />
+        <circle class="progress-ring-circle" cx="100" cy="100" r="90" />
+      </svg>
+      <div class="timer-text" id="timer">30:00</div>
+    </div>
+
+    <div class="buttons">
+      <button id="pauseBtn">Stop</button>
+      <button id="resumeBtn">Go</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+</div>
+
+
+  <video autoplay muted loop id="bg-video">
+    <source src="bg-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <script src="script.js"></script>
+</body>
+</html>
