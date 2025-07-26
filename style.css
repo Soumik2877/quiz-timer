@@ -23,7 +23,7 @@ body {
   .timer-container {
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: 999;
     text-align: center;
     /* background: rgb(220, 250, 182); */
     background: transparent;;
@@ -77,25 +77,27 @@ body {
   }
   
   .buttons button {
-    background: #34495e;
+    background: #34495e00;
     color: white;
-    border: none;
+    border: 2px solid black;
     margin: 0 10px;
-    padding: 10px 20px;
+    padding: 5px 15px;
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
+    z-index: 999;
   }
   
   .buttons button:hover {
     background: #2c3e50;
+    z-index: 999;
   }
   
   .logo {
     width: 100px;           /* You can adjust the size */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -113,14 +115,14 @@ body {
     --ls: clamp(-1.75px, -0.25vw, -3.5px);
   }
   
-  body {
+  /* body {
     /* min-height: 100vh;
     display: grid;
     place-items: center;
     background-color: var(--bg);
-    color: #fff; */
+    color: #fff; 
     font-family: "Inter", "DM Sans", Arial, sans-serif;
-  }
+  } */
   
   *,
   *::before,
@@ -132,12 +134,12 @@ body {
   .content {
     text-align: center;
   }
-  
+/*   
   .title-wrapper {
     position: relative;
-    display: inline-block; /* Shrink-wrap around h1 */
-    z-index: 1;
-  }
+    display: inline-block; 
+    z-index: -1;
+  } */
   .title {
     font-size: var(--fs);
     font-weight: 600;
@@ -147,7 +149,7 @@ body {
     background: var(--bg);
     margin: 40px;
     margin-top: 25px;
-    z-index: 2;
+    z-index: 10;
   }
   
   .aurora {
@@ -311,4 +313,11 @@ body {
     100% {
       border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
     }
+  }
+
+  h3{
+    text-align: left;
+  }
+  .follow-timer{
+    text-align: center;
   }
