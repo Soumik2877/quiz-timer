@@ -78,6 +78,19 @@ body {
   
   .buttons button {
     background: #34495e00;
+    color: rgba(255, 255, 255, 0);
+    border: 2px solid rgba(0, 0, 0, 0);
+    margin: 0 10px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 999;
+  }
+  
+  .buttons button:hover {
+    background: #34495e00;
     color: white;
     border: 2px solid black;
     margin: 0 10px;
@@ -86,12 +99,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
-    z-index: 999;
-  }
-  
-  .buttons button:hover {
-    background: #2c3e50;
-    z-index: 999;
+    z-index: 1000;
   }
   
   .logo {
@@ -111,7 +119,7 @@ body {
     --clr-4: #e54cff;
   
     --blur: 1rem;
-    --fs: clamp(1.8rem, 4vw, 2rem);
+    --fs: clamp(2rem, 4vw, 2rem);
     --ls: clamp(-1.75px, -0.25vw, -3.5px);
   }
   
@@ -141,13 +149,13 @@ body {
     z-index: -1;
   } */
   .title {
-    font-size: var(--fs);
+    font-size:40px;
     font-weight: 600;
     letter-spacing: var(--ls);
     position: relative;
     overflow: hidden;
     background: var(--bg);
-    margin: 40px;
+    margin: 17px;
     margin-top: 25px;
     z-index: 10;
   }
@@ -321,3 +329,24 @@ body {
   .follow-timer{
     text-align: center;
   }
+
+  .center-background-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .floating-logo {
+    position: fixed;
+    top: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 999; /* ensure they are above everything else */
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+  }
+  
